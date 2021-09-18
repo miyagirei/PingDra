@@ -10,13 +10,11 @@ public class fishbone : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+
+    void OnTriggerEnter2D(Collider2D collider)　//トリガーがついていたら
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            Debug.Log("Score -1");
-            Destroy(gameObject);
-        }
+        Debug.Log("Score -1");
+        Destroy(gameObject); //オブジェクトを消す
     }
 
     void Update()
