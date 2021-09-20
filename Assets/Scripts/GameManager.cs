@@ -6,25 +6,52 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int score;
-    private Text textScore;
+    public int scoremeat;
+    private Text ScoreMeat;
+
+    public int scorefish;
+    private Text ScoreFish;
+
+
     void Start()
     {
-        score = 0;
-        textScore = GameObject.Find("Score").GetComponent<Text>();
-        SetScoreText(score);
+        scoremeat = 0;
+        ScoreMeat = GameObject.Find("Meat+").GetComponent<Text>();
+        SetScoreText(scoremeat);
+
+        
+        ScoreFish = GameObject.Find("Fish+").GetComponent<Text>();
+        SetScoreText1(scorefish);
     }
 
     private void SetScoreText(int score)
     {
-        textScore.text = "Score :" + score.ToString();
+        ScoreMeat.text = "×" + score.ToString();
+
+        
+    }
+
+    private void SetScoreText1(int Fishscore)
+    {
+        ScoreFish.text = "×" + Fishscore.ToString();
     }
 
     public void AddScore(int point)
     {
-        score += point;
-        SetScoreText(score);
+        scoremeat += point;
+        SetScoreText(scoremeat);
+
+        
+        
     }
+
+    public void Addfish(int fishpoint)
+    {
+        scorefish += fishpoint;
+        SetScoreText1(scorefish);
+    }
+
+
 
     // Update is called once per frame
     void Update()
