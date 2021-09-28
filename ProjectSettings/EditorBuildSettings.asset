@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/RunPauseScene.unity
+    guid: eb7c2a0350e57d24e82a78f1cb0b748b
+  - enabled: 1
+    path: Assets/Scenes/RunScene.unity
+    guid: b46d8fdab00b6a94aaf4d0578c5f7ca1
   m_configObjects: {}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -22,6 +23,11 @@ public class GameManager : MonoBehaviour
         
         ScoreFish = GameObject.Find("Fish+").GetComponent<Text>();
         SetScoreText1(scorefish);
+    }
+
+    public void RunPause()
+    {
+        SceneManager.LoadScene("RunScene");
     }
 
     private void SetScoreText(int score)
