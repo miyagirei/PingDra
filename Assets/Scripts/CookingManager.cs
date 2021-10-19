@@ -11,11 +11,17 @@ public class CookingManager : MonoBehaviour
 
     //Rei
 
-    public float time; //なんか一度も使用されてないって出てる(?)
+    public float time;
     public Text InstructText;//指示という意味
     public Text leftTime;
 
 
+
+    void Start()
+    {
+        GameObject gm = GameObject.Find("GOD");
+        CUT();
+    }
 
 
     void SetTimeTo10()
@@ -51,7 +57,7 @@ public class CookingManager : MonoBehaviour
     void Update()
     {
         time -= Time.deltaTime;
-        leftTime.text = "のこり " + (time > 0f ? leftTime.ToString("0.00") : "0.00") + " 秒";//なんかバグった、明日対処する
+        leftTime.text = "のこり " + (time.ToString("f2") + "秒");
 
         //10秒ごとにメッセージを変更し、メソッドを実行させるようにする予定
         //今は肉しかないので何かしらの肉料理にする予定(なんかあったっけ)
