@@ -30,12 +30,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("RunScene");
     }
 
+
     private void SetScoreText(int score)
     {
         ScoreMeat.text = "×" + score.ToString();
 
         
     }
+
+
 
     private void SetScoreText1(int Fishscore)
     {
